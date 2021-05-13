@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Baruch Bartending School</title>
-	<link rel="shortcut icon" type="image/jpg" href=""/>
-	<link rel="stylesheet" type="text/css" href="./Style.css">
+<?php
+include("Header.php");
 
-</head>
-<body>
-	<div class="naviBar">
-		<a href="./Home.html" >|   Home   </a>
-		<a href="./Courses.html">|   Courses   </a>
-		<a href="./Schedule.html">|   Schedule   </a>
-		<a href="./ContactUs.html">|   Contact Us     </a>
-		<a href="./Login.html">|   Login    |</a>
-  </div>
+// require("Mysqli_connect.php");
+?>
 
-	
 <h2>Login </h2>
 
 <form action="/action_page.php" method="post">
@@ -27,8 +15,8 @@
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="pword"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pword" required>
         
     <button type="submit">Login</button>
     <label>
@@ -39,6 +27,10 @@
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
+    <span><a href="./Sign_up.php"> | Sign up |</a></span>
   </div>
 </form>
-</body>
+
+<?php
+include("footer.php");
+?>
