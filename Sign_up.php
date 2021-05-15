@@ -13,7 +13,7 @@ include("Header.php");
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" id="uname" required />
 
-    <label for="email"><b>Email/b></label>
+    <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required />
 
     <label for="pword"><b>Password</b></label>

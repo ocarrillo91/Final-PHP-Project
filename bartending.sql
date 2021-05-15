@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 11, 2021 at 10:02 PM
+-- Generation Time: May 15, 2021 at 05:11 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -33,6 +33,13 @@ CREATE TABLE `account` (
   `email` varchar(60) NOT NULL,
   `password` char(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `account`
+--
+
+INSERT INTO `account` (`user_id`, `username`, `email`, `password`) VALUES
+(1, 'test', 'test@test.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3');
 
 -- --------------------------------------------------------
 
@@ -140,7 +147,7 @@ ALTER TABLE `payment_info`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `checkout_cart`
