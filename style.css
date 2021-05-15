@@ -5,7 +5,7 @@ body{
 	background-color: black;
 	color: white;
 	background-position: 50% 50%;
-	margin: 0px 0px -10px 0px;
+	margin: 0px 0px 0px 0px;
 
 }
 
@@ -54,6 +54,50 @@ p{
 
 }
 
+img{
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: 50px;
+  margin-bottom: 0px;
+
+}
+
+.boxFilter {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+  padding: 1rem 2rem;
+  margin: 25px;
+}
+
+.boxFilter2 {
+  background-color: black;
+  opacity: 0.85;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 25px;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .img1, .img2, .img3{
 
@@ -61,6 +105,7 @@ p{
 	border: 1px solid white;
 	margin-bottom: 0px;
 }
+
 
 .naviBar  {
 	text-align: center;
@@ -101,6 +146,27 @@ p{
 
 	
 }
+
+.containerA{
+  
+  float: left;
+  width: 45%;
+  padding: 0px;
+  margin-left: 20px
+
+  
+}
+
+.containerB{
+  
+  float: left;
+  width: 45%;
+  padding: 0px;
+  margin-left: 20px
+
+  
+}
+
 
 .day-of-the-week{
 	display: grid;
@@ -172,6 +238,9 @@ img.avatar {
 
 .container {
   padding: 16px;
+}
+.bcimg{
+  position: left;
 }
 
 span.psw {
