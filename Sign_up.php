@@ -4,7 +4,7 @@ include("Header.php");
 
 <h2>Sign Up</h2>
 
-<form action="./Register.php" method="POST">
+<form action="Register.php" method="POST">
   <div class="imgcontainer">
     <img src="tini.jpeg" alt="Avatar" class="avatar">
   </div>

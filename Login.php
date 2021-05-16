@@ -1,6 +1,10 @@
 <?php
-
 $invalidLogin = false;
+
+if (isset($_COOKIE['user_id'])) {
+    header("Refresh:0, URL=Logged_in.php");
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -13,13 +17,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $query = "SELECT user_id, username FROM account WHERE username='$uVal' AND password=SHA1('$pVal')";
 
     // use @mysqli_query() to surpress error msgs
-    $run = @mysqli_query($dbc, $query);
+    $run = mysqli_query($dbc, $query);
 
     if (mysqli_num_rows($run) == 1) {
-        $row = mysqli_fetch_array($run, MSQLI_ASSOC);
+        $row = mysqli_fetch_array($run, MYSQLI_ASSOC);
         // set cookie and redirect to loggedin page
-        //setcookie('user_id', $row['user_id']);
-        //setcookie('username', $row['username']);
+        setcookie('user_id', $row['user_id']);
+        setcookie('username', $row['username']);
+        header("Refresh:0, URL=Logged_in.php");
+        exit();
     } else {
         // invalid login, add javascript to show invalid login msg
         $invalidLogin = true;
@@ -29,12 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // building the login page
-include("Header.php");
-require_once("Login_form.php");
+include("Login_form.php");
 if ($invalidLogin) {
-    echo "<script>";
-    include("somescript.js");
-    echo "</script>";
+    header("Refresh:0, URL=Home.html");
+    //echo "<p>Invalid login</p>";
+    //echo "<script>";
+    //include("somescript.js");
+    //echo "</script>";
 }
-include("Footer.php");
 ?>
