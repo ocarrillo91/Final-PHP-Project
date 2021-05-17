@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Refresh:5, URL=Login.php");
     } else {
         echo "<h2>Registration Error!</h2>";
-        echo "<p>".mysqli_error($dbc)."</p>";
+        echo "<p style=\"text-align:center;\">".mysqli_error($dbc)."</p>";
         header("Refresh:5, URL=Sign_up.php");
     }
 

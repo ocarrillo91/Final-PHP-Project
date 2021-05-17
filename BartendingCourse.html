@@ -3,7 +3,7 @@
 <head>
 	<title>Bartending Course </title>
 	
-	<link rel="stylesheet" type="text/css" href="./Style.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 
 </head>
 <body>
@@ -58,27 +58,28 @@
 
     <p>The select element is used to create a drop-down list.</p>
 
-    <form action="/action_page.php">
-      <label for="cars">Choose a Schedule:</label>
-      <select name="slot" id="slot">
-        <option value="slot">Select Slot</option>
+    <form action="./Cart.php" method="POST">
+      <label for="schedule">Choose a Schedule:</label>
+      <select name="schedule" id="schedule">
+        <option value="">Select Slot</option>
         <option value="Full-day">Full-Day: 9am-5pm</option>
         <option value="Evenings">Evenings: 6pm-10pm</option>
         <option value="Weekend">Weekend: 5 Consecutive Saturdays 9:30om-5:30pm</option>
       </select><br> 
 
-      <label for="cars">Choose a Start Date:</label>
+      <label for="Date">Choose a Start Date:</label>
       <select name="Date" id="Date">
-        <option value="slot">Select Date</option>
-        <option value="Full-day">Full-Day:May 3rd, 2021</option>
-        <option value="Evenings">Full-Day:May 10th, 2021</option>
-        <option value="Weekend">Full-Day:May 17th, 2021</option>
-        <option value="Weekend">Full-Day:May 24th, 2021</option>
-        <option value="Weekend">Evenings: May 3rd, 2021</option>
-        <option value="Weekend">Evenings: May 17th, 2021</option>
-        <option value="Weekend">Weekend: May 1st, 2021</option>
+        <option value="">Select Date</option>
+        <option value="2021-5-3">Full-Day:May 3rd, 2021</option>
+        <option value="2021-5-10">Full-Day:May 10th, 2021</option>
+        <option value="2021-5-17">Full-Day:May 17th, 2021</option>
+        <option value="2021-5-24">Full-Day:May 24th, 2021</option>
+        <option value="2021-5-3">Evenings: May 3rd, 2021</option>
+        <option value="2021-5-17">Evenings: May 17th, 2021</option>
+        <option value="2021-5-1">Weekend: May 1st, 2021</option>
       </select>
       <br>
+      <input type="hidden" id="bartendingcourse" name="bartendingcourse" value="Bartending Certification">
       <input type="submit" value="Add to Cart">
     </form>
 
