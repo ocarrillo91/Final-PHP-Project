@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Baruch Bartending School</title>
-	<link rel="shortcut icon" type="image/jpg" href="./Images/headshot-grey.jpeg"/>
-	<link rel="stylesheet" type="text/css" href="./Style.css">
+    <title>Baruch Bartending School</title>
+    <link rel="shortcut icon" type="image/jpg" href="./Images/headshot-grey.jpeg" />
+    <link rel="stylesheet" type="text/css" href="./Style.css">
+
+    <!-- Box icon -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-	<div class="naviBar">
-		<a href="./Home.html" >|   Home   </a>
-		<a href="#courses">|   Courses   </a>
-		<a href="./Schedule.html">|   Schedule   </a>
-		<a href="./ContactUs.html">|   Contact us     </a>
-		<a href="./Login.html">|   Login    |</a>
-	</div>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">BBS</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./Home.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
+                    <li class="nav__item"><a href="./Schedule.html" class="nav__link">Schedule</a></li>
+                    <li class="nav__item"><a href="./ContactUs.html" class="nav__link">Contact us</a></li>
+                    <li class="nav__item"><a href="./Login.html" class="nav__link">Login</a></li>
+                </ul>
+            </div>
 
-  <div class="container">
-	 <br><h1>Baruch Bartending School</h1>
-	 <h3>The Primier Bartending School In New York!</h3><br><br>
-
-   <div class="boxFilter2" >
-
-     <h2>The Industry-leading bartender educational program.</h2>
-     <div>State Licensed / Credited / Reputable</div>
-     <p  >Beginners seeking a professional bartender certification program and bartenders looking to step up their game. The New York Bartending School® provides up-to-date training in industry-level bartending and mixology. The bartender training program at our flagship NYC Bartending School is geared towards modern day bartending and mixology knowledge and skills, that quick starts our graduates into the bar business. Our comprehensive bartending course is equivalent to months of on-the-job training.
-      Call or text 212.768.8460 for more info, or make an appointment to visit our bartending school in nyc.</p>
-
-   </div>
-
-    <br><h2> Courses Available now!</h2><br><br><br><br><br><br><br>
-
-    <u><h1>Courses</h1> </u> <br>
-  <div id="courses" class="row">
-    <div class="column" style="background-color:#black;">
-      <h3>Bartending Certification </h3>
-      <img class="img1" src="Bartending.jpeg">
-      <p>Beginners seeking an industry-level bartender certification program, and bartenders looking to step up their game. This intensive course is equivalent to months of on-the-job training. Hands-on, behind-the-bar training!</p><br>
-      <button onclick="document.location='BartendingCourse.html'">Learn More</button>
-
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+    </header>
+    <div >
+    <div class="container">
+        <br><br><br>
+        <h1 class="home__title">Baruch Bartending School</h1>
+        <h3>The Primier Bartending School In New York!</h3><br><br>
+        <div class="boxFilter2">
+            <h2>The Industry-leading bartender educational program.</h2>
+            <div>State Licensed / Credited / Reputable</div>
+            <p>Beginners seeking a professional bartender certification program and bartenders looking to step up their game. The New York Bartending School® provides up-to-date training in industry-level bartending and mixology. The bartender training program at our flagship NYC Bartending School is geared towards modern day bartending and mixology knowledge and skills, that quick starts our graduates into the bar business. Our comprehensive bartending course is equivalent to months of on-the-job training.
+                Call or text 212.768.8460 for more info, or make an appointment to visit our bartending school in nyc.</p>
+        </div>
+        <br><br><br>
+        <h2>Courses Available now!</h2><br><br><br><br><br><br><br>
+        <u>
+            <h1>Courses</h1>
+        </u> <br>
+        <div id="courses" class="row">
+            <div class="column" style="background-color:#black;">
+                <h3>Bartending Certification </h3>
+                <img class="img1" src="Bartending.jpeg">
+                <p>Beginners seeking an industry-level bartender certification program, and bartenders looking to step up their game. This intensive course is equivalent to months of on-the-job training. Hands-on, behind-the-bar training!</p><br>
+                <button onclick="document.location='BartendingCourse.html'">Learn More</button>
+            </div>
+            <div class="column" style="background-color:#black;">
+                <h3>Advance Mixology Certification</h3>
+                <img class="img2" src="mixology.jpeg">
+                <p>Good mixologists are in big demand. If you're looking to work in upscale cocktail bars, then you need to step up your game. Held in a speakeasy bar. Must be 21 - premium spirits and organic produce is used throughout this mixology program.</p>
+                <button onclick="document.location='MixologyCourse.html'">Learn More</button>
+            </div>
+            <div class="column" style="background-color:#black;">
+                <h3>Bar & Restaurant Wine Service</h3>
+                <img class="img3" src="wine.jpeg">
+                <p>A comprehensive level 1 course in bar & restaurant wine knowledge and service for bartenders & servers.
+                    Limited to 6 students.
+                    Must be 21 or over to attend.</p><br><br>
+                <button onclick="document.location='WineCourse.html'">Learn More</button>
+            </div>
+        </div><br> <br>
     </div>
- 
-
-  <div class="column" style="background-color:#black;">
-    <h3>Advance Mixology Certification</h3>
-    <img class="img2" src="mixology.jpeg">
-    <p>Good mixologists are in big demand. If you're looking to work in upscale cocktail bars, then you need to step up your game. Held in a speakeasy bar. Must be 21 - premium spirits and organic produce is used throughout this mixology program.</p>
-     <button onclick="document.location='MixologyCourse.html'">Learn More</button>
-  </div>
-
-  
-  <div class="column" style="background-color:#black;">
-    <h3>Bar & Restaurant Wine Service</h3>
-    <img class="img3" src="wine.jpeg">
-    <p>A comprehensive level 1 course in bar & restaurant wine knowledge and service for bartenders & servers.
-		Limited to 6 students.
-		Must be 21 or over to attend.</p><br><br>
-		 <button onclick="document.location='WineCourse.html'">Learn More</button>
-  </div>
-
-
-  </div><br> <br>
-    
-  </div>
-
-<script type="text/javascript" src="./Script.js"></script>	
-
+    <div class="bottomHeader">
+        Baruch Bartending School® - Not your typical bartending school!
+        © 2021
+    </div>
+    <!-- Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Main js-->
+    <script type="text/javascript" src="./Script.js"></script>
 </body>
-<div class="bottomHeader">Baruch Bartending School® - Not your typical bartending school!
-© 2021</div>
 
 </html>

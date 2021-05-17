@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Baruch Bartending School</title>
-	<link rel="shortcut icon" type="image/jpg" href="./Images/headshot-grey.jpeg"/>
-	<link rel="stylesheet" type="text/css" href="./Style.css">
 
+<head>
+    <title>Baruch Bartending School</title>
+    <link rel="shortcut icon" type="image/jpg" href="./Images/headshot-grey.jpeg" />
+    <link rel="stylesheet" type="text/css" href="./Style.css">
+      <!-- Box icon -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-	<div class="naviBar">
-		<a href="./Home.html" >|   Home   </a>
-		<a href="./Home.html#courses">|   Courses   </a>
-		<a href="./Schedule.html">|   Schedule   </a>
-		<a href="./ContactUs.html">|   Contact Us     </a>
-		<a href="./Login.html">|   Login    |</a>
-	</div><br><br>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">BBS</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./Home.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
+                    <li class="nav__item"><a href="./Schedule.html" class="nav__link">Schedule</a></li>
+                    <li class="nav__item"><a href="./ContactUs.html" class="nav__link">Contact us</a></li>
+                    <li class="nav__item"><a href="./Login.html" class="nav__link">Login</a></li>
+                </ul>
+            </div>
 
-	
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+    </header>
+
+      <!-- Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Main js-->
+    <script type="text/javascript" src="./Script.js"></script>
+</body>
+</html>
