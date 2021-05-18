@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pVal = mysqli_real_escape_string($dbc, trim($_POST['pword']));
 
     // query to check if credentials exist in database
-    $query = "SELECT user_id, username FROM account WHERE username='$uVal' AND password=SHA1('$pVal')";
+    $query = "SELECT user_id, username, email FROM account WHERE username='$uVal' AND password=SHA1('$pVal')";
 
     // use @mysqli_query() to surpress error msgs
     $run = @mysqli_query($dbc, $query);

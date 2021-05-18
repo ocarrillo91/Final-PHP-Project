@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($run2) {
             echo "<h1>Added to Cart!</h1>";
-            header("Refresh:5, URL=Cart.php");
+            header("Refresh:3, URL=Cart.php");
             exit();
         } else {
             echo "<p style='color:red;'>Error</p>";
@@ -53,16 +53,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo "<p style='text-align:center;font-size:large;'>Course: ".$row4['course_name']."</p>";
                 echo "<p style='text-align:center;font-size:large;'>Schedule: ".$row4['schedule']."</p>";
                 echo "<p style='text-align:center;font-size:large;'>Date: ".$row4['date']."</p>";
+                echo "<p style='text-align:center;font-size:large;'>Price: $".$row4['tuition']."</p>";
                 echo "<br />";
             } else {
                 echo "<p style='color:red;'>Error</p>";
             }
         }
         echo "<h3 style='text-align:center;font-size:large;'><a href='./Checkout.php'>Proceed to Checkout</a></h3>";
+        echo "<br /><br />";
+        echo "<h4 style='text-align:center;font-size:large;'><a href='./Clear_cart.php'>Clear shopping cart</a></p>";
+        echo "<br /><br />";
+        echo "<p style='text-align:center;font-size:large;'><a href='./Home.html#courses'>Go to Courses</a></p>";
     } else {
         echo "<p style='text-align:center;font-size:large;'>You have nothing in your shopping cart.</p>";
+        echo "<br /><br />";
+        echo "<p style='text-align:center;font-size:large;'><a href='./Home.html#courses'>Go to Courses</a></p>";
     }
 }
 mysqli_close($dbc);
+?>
+<h2 class="login__title">Login</h2>
+    <form action="Login.php" method="POST">
+        <div class="imgcontainer">
+            <img src="tender.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required />
+            <label for="pword"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pword" required /> 
+            <!-- Invalid Credentials message goes here -->
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+        <div class="container" style="background-color: black">
+            <div class="pword"><a href="#">Forgot password?</a></div>
+            <br />
+            <div class="pword"><a href="Sign_up.php">Sign Up</a></div>
+            <br />
+            <br />
+        </div>
+    </form>
+<?php
 include("Footer.php");
 ?>

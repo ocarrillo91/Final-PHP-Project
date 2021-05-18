@@ -14,6 +14,8 @@ echo "<p style='text-align:center;font-size:large;'>You are logged in!</p>";
 echo "<br /><br />";
 echo "<h3 style='text-align:center;'><a href='./Cart.php'>Shopping Cart</a></h3>";
 echo "<br /><br />";
+echo "<h3 style='text-align:center;'><a href='./Checkout.php'>Proceed to Checkout</a></h3>";
+echo "<br /><br />";
 
 require("Mysqli_connect.php");
 

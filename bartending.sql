@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 17, 2021 at 08:19 AM
+-- Generation Time: May 18, 2021 at 01:24 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -60,9 +60,15 @@ CREATE TABLE `billing` (
   `city` varchar(50) NOT NULL,
   `state` varchar(30) NOT NULL,
   `zip` int(10) UNSIGNED NOT NULL,
-  `phone` int(10) UNSIGNED NOT NULL,
-  `email` varchar(60) NOT NULL
+  `phone` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `billing`
+--
+
+INSERT INTO `billing` (`user_id`, `first_name`, `last_name`, `company_name`, `country`, `street`, `unit`, `city`, `state`, `zip`, `phone`) VALUES
+(1, 'TestFirst', 'TestLast', '', 'United States', '1st Street', 'Unit 4', 'Orange', 'New York', 19823, 16458321152);
 
 -- --------------------------------------------------------
 
@@ -119,10 +125,9 @@ INSERT INTO `courses` (`course_id`, `course_name`, `tuition`, `schedule`, `date`
 
 CREATE TABLE `payment` (
   `user_id` int(10) UNSIGNED DEFAULT NULL,
-  `card_number` int(10) UNSIGNED DEFAULT NULL,
-  `expiration` datetime DEFAULT NULL,
-  `card_security_code` int(10) UNSIGNED DEFAULT NULL,
-  `paypal` tinyint(1) DEFAULT NULL
+  `card_number` bigint(20) UNSIGNED DEFAULT NULL,
+  `expiration_date` char(7) DEFAULT NULL,
+  `card_security_code` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -175,7 +180,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cart_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `courses`

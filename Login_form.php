@@ -12,6 +12,7 @@ include("Header.php");
             <input type="text" placeholder="Enter Username" name="uname" required />
             <label for="pword"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="pword" required /> 
+            <!-- Invalid Credentials message goes here -->
             <button type="submit">Login</button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
